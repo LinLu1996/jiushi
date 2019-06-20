@@ -1,0 +1,152 @@
+.home{
+  width: 100%;
+  height: 100%;
+  font-size: 10px;
+  flex-direction: column;
+  background: #EFEFEF;
+  position: relative;
+}
+input:-webkit-autofill {
+  background-color: #EFEFEF;
+  background-image: none;
+  -webkit-box-shadow: 0 0 0 1000px #EFEFEF inset;
+}
+input:-webkit-autofill :global{
+  background-color:transparent!important;
+}
+.topFrame{
+  width: 100%;
+  // align-self: flex-start;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.title {
+  height: 18rem;
+  width: 100vw;
+  box-sizing: border-box;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  // background: url('../../assets/loginTitle.jpg');
+  // background-size: 100% 100%;
+  a {
+    width: 5rem;
+    height: 5rem;
+    &:nth-child(2) {
+      width: 7rem;
+      height: 7rem;
+    }
+  }
+  img {
+    height: 100%;
+    width: 100%;
+  }
+}
+.loginWord{
+  margin-top: 10vw;
+  font-family: '思源黑体';
+  font-size: 11vw;
+  text-align: center;
+}
+.dotted{
+  margin-top: 4vw;
+  margin-bottom: 5vw;
+  background: #f42c2c;
+  width: 3.6vw;
+  height: 1.333vw;
+}
+
+.codes :global{
+  // position: absolute;
+  // top: 12.5rem;
+  width:75vw;
+  font-family: '思源黑体';
+  font-size: .9rem;
+  .am-list-item.am-input-item{
+    height: 60px;
+    color:#5e5e5e;
+    font-size: 2rem;
+  }
+  .am-list-item .am-input-control input{
+    font-size: 1rem !important;
+    padding: 8px 11px;
+    border-bottom: 1px solid #ccc;
+  }
+  .am-list-line{
+    // border-bottom: 1PX solid #ddd!important;
+    padding-right: 0px;
+  }
+  .am-list-item{
+    padding-left: 0;
+    background-color: #EFEFEF;
+  }
+  .am-button {
+    margin-left: 0!important;
+    &::before{
+      border: 0!important;
+    }
+  }
+  .am-list-item:not(:last-child) .am-list-line {
+    border-bottom: none!important;
+  }
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx){
+    .am-list-line{
+      &:after{
+        display: none!important;
+      }
+    }
+    .am-button {
+      &::before{
+        border: 0!important;
+      }
+    }
+  }
+}
+.loginBtn :global{
+  margin-top: 8vw;
+  margin-bottom: 7vw;
+  width: 100%!important;
+  height: 39px!important;
+  line-height: 39px!important;
+  margin-left: 0!important;
+  text-align: center;
+  background: linear-gradient(to right, #e10019 , #8a0300);
+  display: flex!important;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0;
+  border: 0;
+  position: relative;
+  span{
+    color:#fff;
+    font-size: 16px;
+  }
+}
+.span{
+  color:#0e0e0e;
+  text-align: center;
+  position: relative;
+  margin-top: 20px;
+  font-size: .7rem;
+  width: 100%;
+  display: block;
+}
+.line{
+  border-bottom:1px solid #0e0e0e;
+  position: absolute;
+  left:50%;
+  transform: translateX(-50%);
+  width:50px;
+  height: 100%;
+}
+.line2{
+  border-bottom:1px solid #0e0e0e;
+  position: absolute;
+  left:50%;
+  transform: translateX(-50%);
+  width:58px;
+  height: 100%;
+}

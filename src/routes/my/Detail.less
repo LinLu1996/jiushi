@@ -1,0 +1,127 @@
+@import '../../reset.less';
+@import '../../variables.less';
+.detailWrapper {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  background-color: @baseBgColor;
+  .contentBoxWrapper {
+    background-color: #fff;
+    padding: 1rem;
+    margin: 1rem 0;
+    .title{
+      position: relative;
+      width: 100%;
+      font-weight: bold;
+      margin-bottom: .5rem;
+      line-height: 2rem;
+      &::after{
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        bottom: 0;
+        left: 0;
+        background-color: #ddd;
+        transform: translateY(.5);
+        -webkit-transform:translateY(.5);
+      }
+    }
+    .detailItem:first-child {
+      margin-bottom: 0.5rem;
+      overflow: hidden;
+      div:first-child {
+        float: left;
+      }
+      div:last-child {
+        float: right;
+      }
+    }
+    .shopCard {
+      display: flex;
+      img {
+        width: 7rem;
+        height: 10rem;
+        margin-right: 1rem;
+        background-color: #fff;
+      }
+      .cardDetail {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        line-height: 1.3rem;
+        .titleBox {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          border-bottom: 1px solid @borderColor;
+          padding-bottom: 0.5rem;
+          margin-bottom: 0.5rem;
+          h3 {}
+          span {
+            color: @lightGreyColor;
+          }
+        }
+        .priceBox {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          align-items: flex-end;
+          span {
+            display: inline-block;
+            min-width: 9.5rem;
+            text-align: left;
+            u {
+              color: @lightGreyColor;
+            }
+            i {
+              display: inline-block;
+              min-width: 3rem;
+            }
+            .price {
+              color: @highLightColor;
+            }
+          }
+        }
+      }
+    }
+    .memberInfoWrapper {
+      position: relative;
+      line-height: 2rem;
+    }
+    .deliveryDetailWrapper {
+      display: flex;
+      justify-content: space-between;
+      >div {
+        display: flex;
+        flex-direction: column;
+        line-height: 2rem;
+        span {}
+      }
+      >p {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color: @lightGreyColor;
+      }
+    }
+  }
+}
+
+:global {
+  .detail {
+    .am-navbar-light {
+      color: #323433;
+    }
+    .am-list-item{
+      padding-left: 0;
+    }
+    .am-textarea-control{
+      padding: 0;
+    }
+    .am-textarea-control textarea:disabled{
+      color: #333;
+      font-size: 1rem;
+    }
+  }
+}

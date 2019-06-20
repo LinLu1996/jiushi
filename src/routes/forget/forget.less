@@ -1,0 +1,185 @@
+.register :global{
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+  input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
+    background-color: #fff!important;
+    background-image: none;
+    color: rgb(0, 0, 0);
+  }
+}
+.span{
+  color:#525252;
+  text-align: center;
+  position: relative;
+  margin-top: 20px;
+  font-size: 16 px;
+  width: 100%;
+  display: block;
+}
+.line{
+  border-bottom:1px solid #0e0e0e;
+  position: absolute;
+  left:50%;
+  transform: translateX(-50%);
+  width:45px;
+  height: 100%;
+}
+.topFrame{
+  width: 100%;
+  align-self: flex-start;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.title {
+  height: 5rem;
+  width: 100vw;
+  // background: url('../../../public/juss_logo.png');
+  // background-size: 4rem 4rem;
+  // background-repeat: no-repeat;
+  // background-position: .5rem .5rem;
+  img {
+    height: 4rem;
+    width: 4rem;
+    position: relative;
+    top: .5rem;
+    left: .5rem;
+  }
+}
+.formFrame{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.loginWord{
+  margin-top: 10vw;
+  font-family: '思源黑体';
+  font-size: 7vw;
+  text-align: center;
+}
+.dotted{
+  margin-top: 4vw;
+  margin-bottom: 5vw;
+  background: #f42c2c;
+  width: 3.6vw;
+  height: 1.333vw;
+}
+.cymaFrame :global{
+  width: 100%;
+  display:flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  position: relative;
+  .am-list-item{
+    width: 100%;
+    border-bottom:none;
+  }
+}
+.loginBtn{
+  width: 100%!important;
+  height: 39px!important;
+  line-height: 39px!important;
+  text-align: center;
+  margin-left: 0!important;
+  background: linear-gradient(to right, #e10019 , #8a0300); 
+  display: flex!important;
+  align-self: center;
+  justify-content: center;
+  position: relative;
+  left:50%;
+  transform: translateX(-50%);
+  span{
+    color:#fff;
+  }
+}
+.already{
+  width: 100%;
+  display:block;
+  color:#525252;
+  text-align: center;
+  position: relative;
+}
+.formList :global{
+  width: 63vw;
+  .am-list-body {
+    border: none!important;
+  }
+  .am-list-item{
+    margin-bottom: 12px;
+  }
+  .am-list-item .am-input-control input{
+    font-size: 16px;
+    padding: 8px 11px;
+    border: 1px solid #d9d9d9;
+    border-radius: 0!important;
+  }
+  .am-list-item .am-list-line{
+    padding-right: 0;
+  }
+  .am-list-item .am-input-label,.am-button{
+    color:#525252;
+    height: 39px;
+  }
+  .am-button{
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 16px;
+    color:#fff;
+    height: 39px;
+    line-height: 39px;
+    border-radius:0;
+    margin-left: 0!important;
+    &:before{
+      border:0!important;
+    }
+    background: linear-gradient(to right, #e10019 , #8a0300); 
+  }
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx){
+    .am-list-body{
+      &:before,&:after{
+        background-color:transparent!important;
+      }
+    }
+    .am-list-item{
+      height: 39px;
+      min-height: 39px;
+      border:none;
+      border-radius: 0;
+    }
+    .am-list-line{
+      &:before,&:after{
+        background-color:transparent!important;
+      }
+    }
+    .cymaFrame :global{
+      .am-button{
+        position: absolute!important;
+        height: 39px;
+        line-height: 39px;
+        border-radius: 0!important;
+        border:0!important;
+        top: 0;
+        right: 0;
+        font-size: 16px;
+        color:#fff;
+        background: linear-gradient(to right, #e10019 , #8a0300); 
+        &:before{
+          border:0!important;
+        }
+      }
+    } 
+  }
+  .am-list-item.am-input-item{
+    padding-left: 0;
+  }
+  .am-list-body div:not(:last-child) .am-list-line {
+    border-bottom: none!important;
+  }
+}
+

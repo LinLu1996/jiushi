@@ -1,0 +1,203 @@
+@import './../../reset.less';
+@import './../../variables.less';
+.contentWrapper {
+  font-family: "思源黑体", Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  
+  overflow-y: scroll;
+  box-sizing: border-box;
+  background-color: @baseBgColor;
+  /* 总内容 */
+  .content {
+    // overflow-y: scroll;
+    margin-bottom: 1.5 * @tabBottomHeight;
+    box-sizing: border-box;
+    .userInfoWrapper,
+    .userInfoListWrapper,
+    .userOrderInfoWrapper {
+      padding: 0 1.5rem;
+      margin-bottom: 0.7rem;
+      background-color: #fff;
+      a {
+        color: @baseFontColor;
+      }
+      a:active,
+      a:visited {
+        color: @baseFontColor;
+      }
+    }
+    /* 用户信息简介 */
+    .userInfoWrapper {
+      display: flex;
+      box-sizing: border-box;
+      margin-bottom: 1rem;
+      flex-direction: column;
+      justify-content: space-around;
+      padding-top: 3.5rem;
+      padding-bottom: 2rem;
+      color: #fff;
+      background-color: #A80000;
+      .avatar {
+        width: 0;
+        height: 0;
+        margin-bottom: 0.5rem;
+        padding: 17%;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        img {
+          width: 34vw;
+        }
+      }
+      h1 {
+        margin-bottom: 0.5rem;
+        font-size: 1.5rem;
+        font-family: @fontNumberFamily;
+      }
+      >span {
+        font-size: 1.5rem;
+        font-family: @fontNumberFamily;
+        i {
+          display: inline-block;
+          font-size: 1.2rem;
+          height: 1.2rem;
+          line-height: 1.2rem;
+          vertical-align: top;
+        }
+        i:first-child {
+          font-size: 1.5rem;
+          height: 1.5rem;
+          line-height: 1.5rem;
+          margin-right: 0.5rem;
+        }
+        i:last-child {
+          display: inline-block;
+          height: 1.4rem;
+          line-height: 1.4rem;
+          padding: 0 0.5rem;
+          border-radius: 3px;
+          background-color: #fff;
+          color: #c42c1e;
+          font-size: 1rem;
+          box-sizing: border-box;
+        }
+      }
+    }
+    /* 用户信息列表 */
+    .userInfoListWrapper {}
+    /* 用户积分信息列表 */
+    .userOrderInfoWrapper {}
+  }
+  .btnWrapper {
+    width: 100%;
+    a {
+      display: block;
+      width: 80%;
+      text-align: center;
+      height: 2.5rem;
+      line-height: 2.5rem;
+      margin: 0 auto;
+      background-color: @baseBtnColor;
+      border-radius: 0;
+      color: #ffffff;
+    }
+  }
+}
+
+.noContentWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .avatar {
+    margin-bottom: 2rem;
+  }
+  .linkToLogin {
+    font-size: 1rem;
+    color: #fff;
+    display: flex;
+    align-items: center;
+  }
+}
+
+:global {
+  .myWrapper {
+    /* 去掉list上下边框 */
+    .am-list-body::before {
+      height: 0;
+    }
+    .am-list-body::after {
+      height: 0;
+    }
+    .am-list-line::after {
+      background-color: #676767 !important;
+    }
+    .am-list-item .am-list-line> ::after {
+      height: 0;
+    }
+    .am-list-item {
+      min-height: 2rem;
+    }
+    /* list name font style */
+    .am-list-item .am-list-line .am-list-content {
+      color: @baseFontColor;
+      font-size: 1rem;
+    }
+    /* list value font style */
+    .am-list-item .am-list-line .am-list-extra {
+      flex-basis: 40%;
+      color: #676767;
+      font-size: 1rem;
+      font-family: Arial;
+    }
+    .icomoon-icon-right:before {
+      content: "\e90d";
+      font-size: 2rem;
+      color: #fff;
+    }
+    .am-list-body::before {
+      height: 0 !important;
+    }
+    .am-list-body::after {
+      height: 0 !important;
+    }
+    .icomoon-icon-rt {
+      position: absolute;
+      width: 2rem;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      &:before {
+        content: "\e90d";
+        font-size: 1.2rem;
+      }
+    }
+  }
+  .am-list-item .am-list-line {
+    &>::after {
+      content: '';
+      position: absolute;
+      background-color: #ddd;
+      display: block;
+      z-index: 1;
+      top: auto;
+      right: auto;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 0!important;
+      -webkit-transform-origin: 50% 100%;
+      transform-origin: 50% 100%;
+      -webkit-transform: scaleY(0.5);
+      transform: scaleY(0.5);
+    }
+  }
+  .myWrapper .am-list-item .am-list-line .am-list-content {
+    height: 3rem;
+    line-height: 2rem;
+  }
+}
